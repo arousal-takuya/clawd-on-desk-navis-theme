@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "name": "NAVIS",
+  "author": "takuya",
+  "version": "0.5.0",
+  "description": "NAVIS — Asuka-style ITコンサルタント、スリムチビ全身。9 states + 7 idle anims + 5 reactions + workingTiers + carrying/sweeping.",
+
+  "viewBox": {
+    "x": 0,
+    "y": 0,
+    "width": 32,
+    "height": 32
+  },
+
+  "layout": {
+    "contentBox": { "x": 8, "y": 4, "width": 16, "height": 26 },
+    "centerX": 16,
+    "baselineY": 30,
+    "visibleHeightRatio": 0.85,
+    "baselineBottomRatio": 0.05
+  },
+
+  "states": {
+    "idle":         ["navis-idle.gif"],
+    "thinking":     ["navis-thinking.gif"],
+    "working":      ["navis-working.gif"],
+    "juggling":     ["navis-juggling.png"],
+    "error":        { "files": ["navis-error.png"], "fallbackTo": "attention" },
+    "attention":    ["navis-attention.png"],
+    "notification": { "files": ["navis-notification.png"], "fallbackTo": "attention" },
+    "sleeping":     ["navis-sleeping.gif"],
+    "waking":       ["navis-waking.png"],
+    "carrying":     { "files": ["navis-carrying.png"], "fallbackTo": "working" },
+    "sweeping":     { "files": ["navis-sweeping.png"], "fallbackTo": "working" }
+  },
+
+  "workingTiers": [
+    { "minSessions": 3, "file": "navis-working-tier3.png" },
+    { "minSessions": 2, "file": "navis-juggling.png" },
+    { "minSessions": 1, "file": "navis-working.gif" }
+  ],
+
+  "idleAnimations": [
+    { "file": "navis-idle-look-left.png", "duration": 4000 },
+    { "file": "navis-idle-look-right.png", "duration": 4000 },
+    { "file": "navis-idle-stretch.png", "duration": 5000 },
+    { "file": "navis-idle-yawn.png", "duration": 4500 },
+    { "file": "navis-idle-smug.png", "duration": 5000 },
+    { "file": "navis-idle-headphones-adjust.png", "duration": 4500 },
+    { "file": "navis-idle-hair-flip.png", "duration": 4000 }
+  ],
+
+  "reactions": {
+    "drag":       { "file": "navis-react-drag.png" },
+    "clickLeft":  { "file": "navis-react-click-left.png", "duration": 2500 },
+    "clickRight": { "file": "navis-react-click-right.png", "duration": 2500 },
+    "annoyed":    { "file": "navis-react-annoyed.png", "duration": 3500 },
+    "double":     { "files": ["navis-react-double.png"], "duration": 3500 }
+  },
+
+  "sleepSequence": {
+    "mode": "direct"
+  },
+
+  "timings": {
+    "mouseIdleTimeout": 30000,
+    "mouseSleepTimeout": 90000
+  },
+
+  "hitBoxes": {
+    "default": { "x": 10, "y": 6, "w": 12, "h": 24 },
+    "sleeping": { "x": 9, "y": 12, "w": 14, "h": 18 }
+  },
+  "sleepingHitboxFiles": ["navis-sleeping.gif"]
+}
