@@ -94,24 +94,15 @@
       ],
       "fallbackTo": "working"
     },
-    "yawning": {
-      "files": [
-        "navis-yawning.gif"
-      ],
-      "fallbackTo": "idle"
-    },
-    "dozing": {
-      "files": [
-        "navis-dozing.gif"
-      ],
-      "fallbackTo": "sleeping"
-    },
-    "collapsing": {
-      "files": [
-        "navis-collapsing.gif"
-      ],
-      "fallbackTo": "sleeping"
-    }
+    "yawning": [
+      "navis-yawning.gif"
+    ],
+    "dozing": [
+      "navis-dozing.gif"
+    ],
+    "collapsing": [
+      "navis-collapsing.gif"
+    ]
   },
   "workingTiers": [
     {
@@ -181,24 +172,7 @@
     }
   },
   "sleepSequence": {
-    "mode": "phased",
-    "phases": [
-      {
-        "state": "yawning",
-        "duration": 4500
-      },
-      {
-        "state": "dozing",
-        "duration": 6000
-      },
-      {
-        "state": "collapsing",
-        "duration": 5000
-      },
-      {
-        "state": "sleeping"
-      }
-    ]
+    "mode": "full"
   },
   "timings": {
     "minDisplay": {
