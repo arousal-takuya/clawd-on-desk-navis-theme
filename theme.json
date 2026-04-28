@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "name": "NAVIS",
   "author": "takuya",
-  "version": "0.8.0",
-  "description": "NAVIS — Asuka-style ITコンサルタント、デスクで仕事するスリムチビ。14 states + sleep flow (yawn/doze/collapse) + animated reactions + 7 idle anims + workingTiers + jugglingTiers.",
+  "version": "0.9.0",
+  "description": "NAVIS — Asuka-style ITコンサルタント、デスクで仕事するスリムチビ。14 states all APNG (smooth alpha) + sleep flow + animated reactions + 7 idle anims + workingTiers + jugglingTiers.",
   "viewBox": {
     "x": 0,
     "y": 0,
@@ -50,72 +50,72 @@
   },
   "states": {
     "idle": [
-      "navis-idle.gif"
+      "navis-idle.apng"
     ],
     "thinking": [
-      "navis-thinking.gif"
+      "navis-thinking.apng"
     ],
     "working": [
-      "navis-working.gif"
+      "navis-working.apng"
     ],
     "juggling": [
-      "navis-juggling.gif"
+      "navis-juggling.apng"
     ],
     "error": {
       "files": [
-        "navis-error.gif"
+        "navis-error.apng"
       ],
       "fallbackTo": "attention"
     },
     "attention": [
-      "navis-attention.gif"
+      "navis-attention.apng"
     ],
     "notification": {
       "files": [
-        "navis-notification.gif"
+        "navis-notification.apng"
       ],
       "fallbackTo": "attention"
     },
     "sleeping": [
-      "navis-sleeping.gif"
+      "navis-sleeping.apng"
     ],
     "waking": [
-      "navis-waking.gif"
+      "navis-waking.apng"
     ],
     "carrying": {
       "files": [
-        "navis-carrying.gif"
+        "navis-carrying.apng"
       ],
       "fallbackTo": "working"
     },
     "sweeping": {
       "files": [
-        "navis-sweeping.gif"
+        "navis-sweeping.apng"
       ],
       "fallbackTo": "working"
     },
     "yawning": [
-      "navis-yawning.gif"
+      "navis-yawning.apng"
     ],
     "dozing": [
-      "navis-dozing.gif"
+      "navis-dozing.apng"
     ],
     "collapsing": [
-      "navis-collapsing.gif"
+      "navis-collapsing.apng"
     ]
   },
   "workingTiers": [
     {
       "minSessions": 3,
-      "file": "navis-working-tier3.gif"
+      "file": "navis-working-tier3.apng"
     },
     {
       "minSessions": 2,
-      "file": "navis-juggling.gif"
+      "file": "navis-juggling.apng"
     },
     {
       "minSessions": 1,
-      "file": "navis-working.gif"
+      "file": "navis-working.apng"
     }
   ],
   "idleAnimations": [
@@ -150,23 +150,23 @@
   ],
   "reactions": {
     "drag": {
-      "file": "navis-react-drag.gif"
+      "file": "navis-react-drag.apng"
     },
     "clickLeft": {
-      "file": "navis-react-click-left.gif",
+      "file": "navis-react-click-left.apng",
       "duration": 2500
     },
     "clickRight": {
-      "file": "navis-react-click-right.gif",
+      "file": "navis-react-click-right.apng",
       "duration": 2500
     },
     "annoyed": {
-      "file": "navis-react-annoyed.gif",
+      "file": "navis-react-annoyed.apng",
       "duration": 3500
     },
     "double": {
       "files": [
-        "navis-react-double.gif"
+        "navis-react-double.apng"
       ],
       "duration": 3500
     }
@@ -213,16 +213,16 @@
     }
   },
   "sleepingHitboxFiles": [
-    "navis-sleeping.gif"
+    "navis-sleeping.apng"
   ],
   "jugglingTiers": [
     {
       "minSessions": 2,
-      "file": "navis-working-tier3.gif"
+      "file": "navis-working-tier3.apng"
     },
     {
       "minSessions": 1,
-      "file": "navis-juggling.gif"
+      "file": "navis-juggling.apng"
     }
   ]
 }

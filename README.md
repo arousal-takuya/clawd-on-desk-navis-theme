@@ -7,7 +7,7 @@ A custom theme for [Clawd on Desk](https://github.com/rullerzhou-afk/clawd-on-de
 ## Features
 
 - **14 states** — idle, thinking, working, juggling, error, attention, notification, sleeping, waking, carrying, sweeping, **yawning, dozing, collapsing**
-- **All states animated** — every state is a GIF (no static images)
+- **All APNG** — RGBA with smooth alpha edges (Calico-format), no GIF palette banding
 - **3-phase sleep flow** — idle → yawning → dozing → collapsing → sleeping (Calico-style)
 - **7 idle animations** — look-left, look-right, stretch, yawn, smug, headphones-adjust, hair-flip
 - **5 animated reactions** — clickLeft, clickRight, drag, double-click, annoyed — fires on 2-click / 4-click in idle
