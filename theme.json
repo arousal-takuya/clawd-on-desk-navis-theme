@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "name": "NAVIS",
   "author": "takuya",
-  "version": "0.7.0",
-  "description": "NAVIS — Asuka-style ITコンサルタント、スリムチビ全身。GIF idle (breathing baked in). 11 states + 7 idle anims + 5 reactions + workingTiers + carrying/sweeping.",
+  "version": "0.8.0",
+  "description": "NAVIS — Asuka-style ITコンサルタント、デスクで仕事するスリムチビ。14 states + sleep flow (yawn/doze/collapse) + animated reactions + 7 idle anims + workingTiers + jugglingTiers.",
   "viewBox": {
     "x": 0,
     "y": 0,
@@ -59,20 +59,20 @@
       "navis-working.gif"
     ],
     "juggling": [
-      "navis-juggling.png"
+      "navis-juggling.gif"
     ],
     "error": {
       "files": [
-        "navis-error.png"
+        "navis-error.gif"
       ],
       "fallbackTo": "attention"
     },
     "attention": [
-      "navis-attention.png"
+      "navis-attention.gif"
     ],
     "notification": {
       "files": [
-        "navis-notification.png"
+        "navis-notification.gif"
       ],
       "fallbackTo": "attention"
     },
@@ -80,29 +80,47 @@
       "navis-sleeping.gif"
     ],
     "waking": [
-      "navis-waking.png"
+      "navis-waking.gif"
     ],
     "carrying": {
       "files": [
-        "navis-carrying.png"
+        "navis-carrying.gif"
       ],
       "fallbackTo": "working"
     },
     "sweeping": {
       "files": [
-        "navis-sweeping.png"
+        "navis-sweeping.gif"
       ],
       "fallbackTo": "working"
+    },
+    "yawning": {
+      "files": [
+        "navis-yawning.gif"
+      ],
+      "fallbackTo": "idle"
+    },
+    "dozing": {
+      "files": [
+        "navis-dozing.gif"
+      ],
+      "fallbackTo": "sleeping"
+    },
+    "collapsing": {
+      "files": [
+        "navis-collapsing.gif"
+      ],
+      "fallbackTo": "sleeping"
     }
   },
   "workingTiers": [
     {
       "minSessions": 3,
-      "file": "navis-working-tier3.png"
+      "file": "navis-working-tier3.gif"
     },
     {
       "minSessions": 2,
-      "file": "navis-juggling.png"
+      "file": "navis-juggling.gif"
     },
     {
       "minSessions": 1,
@@ -141,33 +159,70 @@
   ],
   "reactions": {
     "drag": {
-      "file": "navis-react-drag.png"
+      "file": "navis-react-drag.gif"
     },
     "clickLeft": {
-      "file": "navis-react-click-left.png",
+      "file": "navis-react-click-left.gif",
       "duration": 2500
     },
     "clickRight": {
-      "file": "navis-react-click-right.png",
+      "file": "navis-react-click-right.gif",
       "duration": 2500
     },
     "annoyed": {
-      "file": "navis-react-annoyed.png",
+      "file": "navis-react-annoyed.gif",
       "duration": 3500
     },
     "double": {
       "files": [
-        "navis-react-double.png"
+        "navis-react-double.gif"
       ],
       "duration": 3500
     }
   },
   "sleepSequence": {
-    "mode": "direct"
+    "mode": "phased",
+    "phases": [
+      {
+        "state": "yawning",
+        "duration": 4500
+      },
+      {
+        "state": "dozing",
+        "duration": 6000
+      },
+      {
+        "state": "collapsing",
+        "duration": 5000
+      },
+      {
+        "state": "sleeping"
+      }
+    ]
   },
   "timings": {
+    "minDisplay": {
+      "attention": 2500,
+      "error": 3500,
+      "notification": 3500,
+      "carrying": 2500,
+      "sweeping": 5000,
+      "working": 1000,
+      "thinking": 1000
+    },
+    "autoReturn": {
+      "attention": 5000,
+      "error": 5000,
+      "notification": 5000,
+      "carrying": 3000
+    },
+    "yawnDuration": 4500,
+    "dozeDuration": 6000,
+    "collapseDuration": 5000,
+    "wakeDuration": 3000,
+    "deepSleepTimeout": 600000,
     "mouseIdleTimeout": 30000,
-    "mouseSleepTimeout": 90000
+    "mouseSleepTimeout": 60000
   },
   "hitBoxes": {
     "default": {
@@ -185,5 +240,15 @@
   },
   "sleepingHitboxFiles": [
     "navis-sleeping.gif"
+  ],
+  "jugglingTiers": [
+    {
+      "minSessions": 2,
+      "file": "navis-working-tier3.gif"
+    },
+    {
+      "minSessions": 1,
+      "file": "navis-juggling.gif"
+    }
   ]
 }

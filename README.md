@@ -6,11 +6,13 @@ A custom theme for [Clawd on Desk](https://github.com/rullerzhou-afk/clawd-on-de
 
 ## Features
 
-- **11 states** — idle, thinking, working, juggling, error, attention, notification, sleeping, waking, carrying, sweeping
-- **4 animated GIFs** — idle (breathing), working (typing), thinking (eye-shift), sleeping (breath)
+- **14 states** — idle, thinking, working, juggling, error, attention, notification, sleeping, waking, carrying, sweeping, **yawning, dozing, collapsing**
+- **All states animated** — every state is a GIF (no static images)
+- **3-phase sleep flow** — idle → yawning → dozing → collapsing → sleeping (Calico-style)
 - **7 idle animations** — look-left, look-right, stretch, yawn, smug, headphones-adjust, hair-flip
-- **5 reactions** — clickLeft, clickRight, drag, double-click, annoyed (eye-roll) — fires on 2-click / 4-click in idle
-- **3 working tiers** — typing → juggling → tier3 (multi-monitor) based on concurrent session count
+- **5 animated reactions** — clickLeft, clickRight, drag, double-click, annoyed — fires on 2-click / 4-click in idle
+- **workingTiers** (3) + **jugglingTiers** (2) — escalating poses based on concurrent session count
+- **Desk world** — NAVIS is seated at a desk with monitor + keyboard for working/juggling/sleeping states
 
 ## Install
 
