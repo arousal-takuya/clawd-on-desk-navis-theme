@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "name": "NAVIS",
   "author": "takuya",
-  "version": "0.5.0",
-  "description": "NAVIS — Asuka-style ITコンサルタント、スリムチビ全身。9 states + 7 idle anims + 5 reactions + workingTiers + carrying/sweeping.",
+  "version": "0.6.0",
+  "description": "NAVIS — Asuka-style ITコンサルタント、スリムチビ全身。Pure SVG idle with CSS keyframes (breathe + blink) + eye tracking. 9 states + 7 idle anims + 5 reactions + workingTiers + carrying/sweeping.",
 
   "viewBox": {
     "x": 0,
@@ -20,8 +20,23 @@
     "baselineBottomRatio": 0.05
   },
 
+  "eyeTracking": {
+    "enabled": true,
+    "states": ["idle"],
+    "eyeRatioX": 0.500,
+    "eyeRatioY": 0.434,
+    "maxOffset": 4,
+    "bodyScale": 0.1,
+    "shadowStretch": 0.0,
+    "shadowShift": 0.0,
+    "ids": {
+      "eyes": "eyes-js",
+      "body": "body-js"
+    }
+  },
+
   "states": {
-    "idle":         ["navis-idle.gif"],
+    "idle":         ["navis-idle.svg"],
     "thinking":     ["navis-thinking.gif"],
     "working":      ["navis-working.gif"],
     "juggling":     ["navis-juggling.png"],
