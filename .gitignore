@@ -1,3 +1,8 @@
 .DS_Store
 *.swp
 __pycache__/
+
+# Work-in-progress / intermediate assets (kept locally, not published).
+# Final assets shipped in the repo do NOT use the leading underscore.
+# Covers: _*-keyed.png, _*-bak.apng, _*-prev.png, _reference.png, etc.
+assets/_*
