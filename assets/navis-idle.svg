@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1254 1254" width="1254" height="1254" image-rendering="pixelated" shape-rendering="crispEdges" preserveAspectRatio="xMidYMid meet">
+  <style>
+    image, rect { image-rendering: pixelated; image-rendering: crisp-edges; }
+    #body-js {
+      transform-origin: 50% 100%;
+      transform-box: fill-box;
+      animation: breathe 3.6s ease-in-out infinite;
+    }
+    #eyes-js {
+      transform-origin: 50% 60%;
+      transform-box: fill-box;
+      animation: blink 5.2s ease-in-out infinite;
+    }
+    @keyframes breathe {
+      0%, 100% { transform: scale(1, 1); }
+      50%      { transform: scale(1.02, 0.98) translateY(2px); }
+    }
+    @keyframes blink {
+      0%, 92%, 100% { transform: scaleY(1); }
+      94%, 96%      { transform: scaleY(0.05); }
+    }
+  </style>
+  <defs>
+    <clipPath id="eyes-clip">
+      <rect x="505" y="449" width="68" height="52"/>
+      <rect x="663" y="453" width="68" height="52"/>
+    </clipPath>
+  </defs>
+  <g id="body-js">
+    <image href="navis-idle.png" xlink:href="navis-idle.png" x="0" y="0" width="1254" height="1254" image-rendering="pixelated" preserveAspectRatio="none"/>
+    <rect x="505" y="449" width="68" height="52" fill="#fccfa1"/>
+    <rect x="663" y="453" width="68" height="52" fill="#fccfa1"/>
+  </g>
+  <g id="eyes-js">
+    <image href="navis-idle.png" xlink:href="navis-idle.png" x="0" y="0" width="1254" height="1254" clip-path="url(#eyes-clip)" image-rendering="pixelated" preserveAspectRatio="none"/>
+  </g>
+</svg>
