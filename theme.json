@@ -165,9 +165,7 @@
       "duration": 3500
     },
     "double": {
-      "files": [
-        "navis-react-double.apng"
-      ],
+      "file": "navis-react-double.apng",
       "duration": 3500
     }
   },
